@@ -2,10 +2,14 @@
 	<h2>Your Preferences</h2>
 	<div class="preferences-bar">
 		<ul class="inline">
-			<li class="inline" v-for="langObj in languageObjectList" :key="langObj.language">
+			<li
+				class="inline"
+				v-for="langObj in languageObjectList"
+				:key="langObj.language"
+			>
 				<base-language-tag
 					class="clickable"
-					:class="{selected: langObj.isSelected}"
+					:class="{ selected: langObj.isSelected }"
 					@click="toggleSelection(langObj.language)"
 					>{{ langObj.language }}</base-language-tag
 				>
@@ -20,59 +24,26 @@ export default {
 	components: {
 		BaseLanguageTag
 	},
-	data() {
-		return {
-			languageObjectList: [
-				{
-					language: "Java",
-					isSelected: false
-				},
-				{
-					language: "Python",
-					isSelected: false
-				},
-				{
-					language: "JavaScript",
-					isSelected: false
-				},
-				{
-					language: "C#",
-					isSelected: false
-				},
-				{
-					language: "PHP",
-					isSelected: false
-				}
-			]
-		};
-	},
 	computed: {
-		languages() {
-			return this.languageObjectList.map(
-				langObj => langObj.language
-			);
+		languageObjectList() {
+			return this.$store.getters["preferences/getLanguageObjectList"];
 		},
-		selectedLanguages() {
-			const selectedLanguages = this.languageObjectList
-				.filter(langObj => langObj.isSelected)
-				.map(langObj => langObj.language);
-			return selectedLanguages;
+		languages() {
+			return this.languageObjectList.map(langObj => langObj.language);
 		}
 	},
 	methods: {
 		toggleSelection(language) {
-			this.languageObjectList.forEach(langObj => {
-				if (langObj.language === language) {
-					langObj.isSelected = !langObj.isSelected;
-				}
-			});
+			// dispatch action telling vuex to toggle the isSelected property of this language
+			this.$store.dispatch(
+				"preferences/toggleLanguageIsSelected",
+				language
+			);
 		}
 	},
-	watch: {
-		selectedLanguages(newValues) {
-			// dispatch
-			console.log(newValues);
-		}
+	created() {
+		// initialize languageObject list in vuex
+		this.$store.dispatch("preferences/initializePreferences");
 	}
 };
 </script>

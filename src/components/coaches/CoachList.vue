@@ -21,7 +21,7 @@ export default {
 	},
 	computed: {
 		coachList() {
-			return this.$store.getters.getCoachList;
+			return this.$store.getters["coaches/getCoachList"];
 		}
 	}
 };
