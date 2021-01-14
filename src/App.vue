@@ -43,4 +43,8 @@ body,
 .list-no-decoration {
 	list-style-type: none;
 }
+
+.buttton-no-focus:focus {
+	outline: none;
+}
 </style>

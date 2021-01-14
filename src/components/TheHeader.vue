@@ -21,7 +21,7 @@
 						sent
 					</button>
 				</router-link>
-				
+
 				<button class="header-button">
 					logout
 				</button>

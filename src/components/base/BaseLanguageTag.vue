@@ -1,5 +1,5 @@
 <template>
-	<button class="base-language-button">
+	<button class="base-language-button buttton-no-focus">
 		<slot></slot>
 	</button>
 </template>
