@@ -41,6 +41,18 @@ export default {
 		},
 		toggleLanguageIsSelected(context, language) {
 			context.commit("TOGGLE_IS_SELECTED", language);
+
+			// reload coach list
+
+			// first: create array containing only languages where isSelected is true
+			const selectedLanguages = context.state.languageObjectList
+				.filter(langObj => langObj.isSelected)
+				.map(langObj => langObj.language);
+
+			// dispatch an action in coaches module with selected languages as parameter
+			context.dispatch("coaches/updateCoachList", selectedLanguages, {
+				root: true
+			});
 		}
 	}
 };

@@ -4,8 +4,25 @@ export default {
 	namespaced: true,
 	state() {
 		return {
-			coachList
+			coachList: coachList,
+			initialCoachList: JSON.parse(JSON.stringify(coachList))
 		};
+	},
+	mutations: {
+		COACH_LIST_UPDATE(state, selectedLanguages) {
+			// if there are no selected languages return initial coach list
+			state.coachList = state.initialCoachList;
+			if (selectedLanguages.length === 0) return;
+			state.coachList = state.coachList.filter(coach => {
+				let coachKnowsLanguage = false;
+				coach.languages.forEach(lang => {
+					if (selectedLanguages.includes(lang)) {
+						coachKnowsLanguage = true;
+					}
+				});
+				return coachKnowsLanguage;
+			});
+		}
 	},
 	getters: {
 		getCoachList(state) {
@@ -22,6 +39,11 @@ export default {
 				});
 			});
 			return languages;
+		}
+	},
+	actions: {
+		updateCoachList(context, selectedLanguages) {
+			context.commit("COACH_LIST_UPDATE", selectedLanguages);
 		}
 	}
 };
