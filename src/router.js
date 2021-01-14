@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import CoachList from "./components/coaches/CoachList.vue";
+import TheHome from "./components/TheHome.vue";
 import CoachItem from "./components/coaches/CoachItem.vue";
 import RequestList from "./components/requests/RequestList.vue";
 import TheNotFound from "./components/TheNotFound.vue";
@@ -11,16 +11,16 @@ const router = createRouter({
 		{
 			name: "root",
 			path: "/",
-			redirect: "/coaches"
+			redirect: "/home"
 		},
 		{
 			name: "coaches",
-			path: "/coaches",
-			component: CoachList
+			path: "/home",
+			component: TheHome
 		},
 		{
 			name: "coach",
-			path: "/coaches/:coachId",
+			path: "/profile/:coachId",
 			component: CoachItem
 		},
 		{

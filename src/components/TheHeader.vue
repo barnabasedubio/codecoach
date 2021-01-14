@@ -2,12 +2,29 @@
 	<header>
 		<div class="header-content">
 			<div class="header-title">
-				<h1>codeCoach</h1>
+				<h2>
+					<router-link class="router-link" to="/home"
+						>codeCoach</router-link
+					>
+				</h2>
 			</div>
+
 			<div class="header-buttons">
-				<button class="header-button">all coaches</button>
-				<button class="header-button">sent</button>
-				<button class="header-button">logout</button>
+				<router-link class="router-link" to="/home">
+					<button class="header-button">
+						view coaches
+					</button>
+				</router-link>
+
+				<router-link class="router-link" to="/sent-requests">
+					<button class="header-button">
+						sent
+					</button>
+				</router-link>
+				
+				<button class="header-button">
+					logout
+				</button>
 			</div>
 		</div>
 	</header>
@@ -20,7 +37,7 @@ export default {};
 <style>
 header {
 	background-color: #ccc;
-	height: 5%;
+	height: 3rem;
 }
 .header-content {
 	/* border: 1px solid red; */
@@ -34,6 +51,9 @@ header {
 	/* border: 1px solid red; */
 	display: inline-block;
 }
+.header-title h2 {
+	font-size: 2rem;
+}
 .header-buttons {
 	/* border: 1px solid red; */
 	min-width: 25rem;
@@ -43,5 +63,8 @@ header {
 }
 .header-button {
 	padding: 0 2rem;
+}
+.router-link {
+	text-decoration: none;
 }
 </style>

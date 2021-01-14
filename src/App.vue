@@ -27,11 +27,20 @@ export default {
 html,
 body,
 #app {
-	height: 100%;
+	min-height: 100vh;
 }
+
 #app {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+.inline {
+	display: inline;
+}
+
+.list-no-decoration {
+	list-style-type: none;
 }
 </style>

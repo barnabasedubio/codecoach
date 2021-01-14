@@ -13,7 +13,7 @@ export default {};
 <style>
 footer {
 	background-color: #ccc;
-	height: 5%;
+	height: 5vh;
 }
 .footer-content {
 	text-align: center;
