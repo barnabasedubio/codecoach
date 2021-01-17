@@ -8,6 +8,7 @@
 				:languages="coach.languages"
 				:salary="coach.salary"
 				:description="coach.description"
+				:profileClicked="false"
 			></coach-item>
 		</li>
 	</ul>
@@ -21,7 +22,17 @@ export default {
 	},
 	computed: {
 		coachList() {
-			return this.$store.getters["coaches/getCoachList"];
+			return this.$store.getters["coaches/getCurrentCoachList"];
+		},
+		selectedCoachId() {
+			return this.$store.getters["coaches/selectedCoachId"];
+		}
+	},
+	watch: {
+		"$store.state.coaches.selectedCoachId"() {
+			if (this.$store.state.coaches.selectedCoachId) {
+				// remove all coaches except the selected coach
+			}
 		}
 	}
 };

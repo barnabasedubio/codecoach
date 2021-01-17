@@ -11,22 +11,36 @@
 				<base-language-tag>{{ lang }}</base-language-tag>
 			</li>
 		</ul>
+		<h4 v-if="profileClicked">About me</h4>
 		<p>{{ description }}</p>
+		<div v-if="!profileClicked">
+			<router-link :to="/coach/ + id">
+				<base-button>View Profile</base-button>
+			</router-link>
+		</div>
 	</div>
 </template>
 
 <script>
 import BaseLanguageTag from "../base/BaseLanguageTag.vue";
+import BaseButton from "../base/BaseButton.vue";
 export default {
 	props: {
 		id: String,
 		name: String,
 		languages: Array,
 		salary: Number,
-		description: String
+		description: String,
+		profileClicked: Boolean
 	},
 	components: {
-		BaseLanguageTag
+		BaseLanguageTag,
+		BaseButton
+	},
+	methods: {
+		visitCoachProfile() {
+			return;
+		}
 	}
 };
 </script>
