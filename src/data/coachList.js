@@ -1,8 +1,8 @@
-import generateID from "./generateID.js";
+// import generateID from "./generateID.js";
 
 export default [
 	{
-		id: generateID(),
+		id: "kk0f7jp6r77i41k2xwh",
 		name: "Tom Hardy",
 		languages: ["Java", "PHP"],
 		salary: 60,
@@ -10,7 +10,7 @@ export default [
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
 	},
 	{
-		id: generateID(),
+		id: "kk0f90akuev5c5j0j3a",
 		name: "Jessica Alba",
 		languages: ["Python"],
 		salary: 25,
@@ -18,7 +18,7 @@ export default [
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
 	},
 	{
-		id: generateID(),
+		id: "kk0f90akgjj4qmz5j7j",
 		name: "Nina Dobrev",
 		languages: ["Python", "JavaScript"],
 		salary: 120,
@@ -26,7 +26,7 @@ export default [
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
 	},
 	{
-		id: generateID(),
+		id: "kk0f90ak8f5qgc2rqnv",
 		name: "Jermaine Jones",
 		languages: ["C#", "PHP", "Python"],
 		salary: 35,
@@ -34,7 +34,7 @@ export default [
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
 	},
 	{
-		id: generateID(),
+		id: "kk0f90aknjoh25kufqd",
 		name: "Peter Jackson",
 		languages: ["JavaScript", "Java", "C#"],
 		salary: 22,
@@ -42,7 +42,7 @@ export default [
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
 	},
 	{
-		id: generateID(),
+		id: "kk0f90akktbxbpurre8",
 		name: "Mark Zuckerberg",
 		languages: ["C#", "PHP"],
 		salary: 37,
@@ -50,7 +50,7 @@ export default [
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
 	},
 	{
-		id: generateID(),
+		id: "kk0f90akr2iya6lb2nn",
 		name: "Elon Musk",
 		languages: ["C#"],
 		salary: 1200,
@@ -58,11 +58,19 @@ export default [
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
 	},
 	{
-		id: generateID(),
+		id: "kk0f90akgnbgo0xmsvc",
 		name: "Jeff Bezos",
 		languages: ["Python", "PHP", "Java", "JavaScript"],
 		salary: 750,
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
+	},
+	{
+		id: "kk0f90akmwqi5n4xa1f",
+		name: "Tony Stark",
+		languages: ["Rust"],
+		salary: 120,
+		description:
+			"What the fuck did you just fucking say about me, you little bitch? I'll have you know I graduated top of my class in the Navy Seals, and I've been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed kills."
 	}
 ];

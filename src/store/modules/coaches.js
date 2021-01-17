@@ -5,11 +5,12 @@ export default {
 	state() {
 		return {
 			coachList: coachList,
+			// deep copy of initial coach list
 			initialCoachList: JSON.parse(JSON.stringify(coachList))
 		};
 	},
 	mutations: {
-		COACH_LIST_UPDATE(state, selectedLanguages) {
+		UPDATE_COACH_LIST(state, selectedLanguages) {
 			// if there are no selected languages return initial coach list
 			state.coachList = state.initialCoachList;
 			if (selectedLanguages.length === 0) return;
@@ -22,11 +23,17 @@ export default {
 				});
 				return coachKnowsLanguage;
 			});
+		},
+		UPDATE_SELECTED_COACH_ID(state, coachId) {
+			state.selectedCoachId = coachId;
 		}
 	},
 	getters: {
-		getCoachList(state) {
+		getCurrentCoachList(state) {
 			return state.coachList;
+		},
+		getAllCoachesList(state) {
+			return state.initialCoachList;
 		},
 		getCoachListLanguages(state) {
 			// return a set of all languages supported by the coaches
@@ -43,7 +50,7 @@ export default {
 	},
 	actions: {
 		updateCoachList(context, selectedLanguages) {
-			context.commit("COACH_LIST_UPDATE", selectedLanguages);
+			context.commit("UPDATE_COACH_LIST", selectedLanguages);
 		}
 	}
 };

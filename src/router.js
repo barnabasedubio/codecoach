@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import TheHome from "./components/TheHome.vue";
-import CoachItem from "./components/coaches/CoachItem.vue";
+import CoachDetail from "./components/coaches/CoachDetail.vue";
 import RequestList from "./components/requests/RequestList.vue";
 import TheNotFound from "./components/TheNotFound.vue";
 
@@ -20,8 +20,9 @@ const router = createRouter({
 		},
 		{
 			name: "coach",
-			path: "/profile/:coachId",
-			component: CoachItem
+			path: "/coach/:coachId",
+			component: CoachDetail,
+			props: true
 		},
 		{
 			name: "requests",
