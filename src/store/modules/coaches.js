@@ -51,6 +51,11 @@ export default {
 	actions: {
 		updateCoachList(context, selectedLanguages) {
 			context.commit("UPDATE_COACH_LIST", selectedLanguages);
+		},
+		getCoachInfoById(context, coachId) {
+			return context.state.initialCoachList.find(
+				coachObj => coachObj.id === coachId
+			);
 		}
 	}
 };

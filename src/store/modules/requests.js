@@ -15,8 +15,7 @@ export default {
 	},
 	mutations: {
 		ADD_REQUEST(state, requestObject) {
-			state.requestList.push(requestObject);
-			console.log(state.requestList);
+			state.requestList.unshift(requestObject);
 		},
 		INITIALIZE_REQUEST_LIST(state, requestList) {
 			state.requestList = requestList;
@@ -64,6 +63,8 @@ export default {
 								requestText: data[id].requestText
 							});
 						}
+						// newest requests should be at the top
+						resultsList = resultsList.reverse();
 						context.commit("INITIALIZE_REQUEST_LIST", resultsList);
 					})
 					.catch(error => {

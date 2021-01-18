@@ -30,6 +30,10 @@ body,
 	min-height: 100vh;
 }
 
+h2 {
+	margin-left: 1rem;
+}
+
 #app {
 	display: flex;
 	flex-direction: column;

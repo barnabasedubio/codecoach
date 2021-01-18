@@ -16,9 +16,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 main {
-	border: 1px solid red;
 	min-height: 90vh;
 	width: 60%;
 	margin: 0 auto;

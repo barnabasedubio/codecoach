@@ -4,34 +4,40 @@
 			<div class="header-title">
 				<h2>
 					<router-link class="router-link" to="/home"
-						>codeCoach</router-link
+						>CodeCoach</router-link
 					>
 				</h2>
 			</div>
 
 			<div class="header-buttons">
 				<router-link class="router-link" to="/home">
-					<button class="header-button">
-						view coaches
-					</button>
+					<base-button class="header-button">
+						View coaches
+					</base-button>
 				</router-link>
 
 				<router-link class="router-link" to="/sent-requests">
-					<button class="header-button">
-						sent
-					</button>
+					<base-button class="header-button">
+						Sent
+					</base-button>
 				</router-link>
-
-				<button class="header-button">
-					logout
-				</button>
+				<router-link to="/home">
+					<base-button class="header-button">
+						Logout
+					</base-button>
+				</router-link>
 			</div>
 		</div>
 	</header>
 </template>
 
 <script>
-export default {};
+import BaseButton from "./base/BaseButton.vue";
+export default {
+	components: {
+		BaseButton
+	}
+};
 </script>
 
 <style>
@@ -56,15 +62,25 @@ header {
 }
 .header-buttons {
 	/* border: 1px solid red; */
-	min-width: 25rem;
+	min-width: 20rem;
 	float: right;
 	display: flex;
 	justify-content: space-between;
 }
+
 .header-button {
-	padding: 0 2rem;
+	border: 0 !important;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
+
+.header-button:focus {
+	outline: none;
+}
+
 .router-link {
 	text-decoration: none;
+	color: black;
 }
 </style>

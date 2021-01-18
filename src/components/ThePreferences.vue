@@ -1,5 +1,5 @@
 <template>
-	<h2>Your Preferences</h2>
+	<h2>Select Your Preferences</h2>
 	<div class="preferences-bar">
 		<ul class="inline">
 			<li
@@ -8,7 +8,7 @@
 				:key="langObj.language"
 			>
 				<base-language-tag
-					class="clickable"
+					class="clickable v-align"
 					:class="{ selected: langObj.isSelected }"
 					@click="toggleSelection(langObj.language)"
 					>{{ langObj.language }}</base-language-tag
@@ -48,16 +48,23 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .preferences-bar {
-	border: 1px solid red;
 	height: 2.5rem;
+	margin-top: 0.5rem;
+	background-color: #eee;
+	border-radius: 20px;
 }
 .clickable {
 	cursor: pointer;
 }
 .selected {
 	color: white;
-	background-color: purple;
+	background-color: #555;
+}
+.v-align {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 </style>

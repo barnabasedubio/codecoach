@@ -1,22 +1,36 @@
 <template>
-	<coach-item
-		:id="coachId"
-		:name="name"
-		:languages="languages"
-		:salary="salary"
-		:description="description"
-		:profileClicked="true"
-	></coach-item>
-	<div>
-		<textarea
-			name=""
-			id=""
-			cols="30"
-			rows="10"
-			placeholder="keep it short dumbass"
-			ref="requestText"
-		></textarea>
-		<base-button @click="addRequest">Send coaching request</base-button>
+	<div class="return-to-coaches">
+		<router-link to="/home">
+			<img class="left-arrow" src="../../assets/left-arrow.svg" />
+			<h4 class="inline">Return to coaches</h4>
+		</router-link>
+	</div>
+	<div class="coach-detail">
+		<div class="coach-detail-content">
+			<coach-item
+				class="no-border no-margin-top"
+				:id="coachId"
+				:name="name"
+				:languages="languages"
+				:salary="salary"
+				:description="description"
+				:profileClicked="true"
+			></coach-item>
+			<div class="coaching-request">
+				<textarea
+					class="textarea-coaching-request"
+					name=""
+					id=""
+					:placeholder="placeholderText"
+					ref="requestText"
+				></textarea>
+				<base-button
+					class="button-send-coaching-request"
+					@click="addRequest"
+					>Send coaching request</base-button
+				>
+			</div>
+		</div>
 	</div>
 </template>
 
@@ -39,6 +53,11 @@ export default {
 			salary: 0,
 			description: ""
 		};
+	},
+	computed: {
+		placeholderText() {
+			return "Send " + this.name + " a coaching request.";
+		}
 	},
 	methods: {
 		addRequest() {
@@ -68,4 +87,49 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.coach-detail {
+	width: 50%;
+	height: 70vh;
+	margin: 0 auto;
+}
+.left-arrow {
+	height: 20px;
+	width: 20px;
+	position: relative;
+	top: 0.25rem;
+	margin-right: 0.4rem;
+}
+.return-to-coaches {
+	width: 50%;
+	margin: 0 auto;
+}
+.return-to-coaches a {
+	text-decoration: none;
+	color: black;
+}
+.coach-detail-content {
+	border: 1px solid black;
+}
+.coaching-request {
+	padding: 1rem;
+}
+.textarea-coaching-request {
+	border: 1px solid #888;
+	width: 100%;
+	height: 8rem;
+	margin: 1rem auto;
+	padding: 1rem;
+}
+.button-send-coaching-request {
+	display: block;
+}
+
+.no-border {
+	border: 0;
+}
+
+.no-margin-top {
+	margin-top: 0;
+}
+</style>
