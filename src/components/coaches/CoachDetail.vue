@@ -28,7 +28,7 @@
 					<base-button
 						class="button-send-coaching-request"
 						@click="addRequest"
-						>Send coaching request</base-button
+						>{{ coachingRequestButtonText }}</base-button
 					>
 				</div>
 
@@ -57,7 +57,8 @@ export default {
 			name: "",
 			languages: [],
 			salary: 0,
-			description: ""
+			description: "",
+			coachingRequestButtonText: "Send coaching request"
 		};
 	},
 	computed: {
@@ -82,6 +83,12 @@ export default {
 			};
 			this.$store.dispatch("requests/addRequest", requestObject);
 			this.$refs.requestText.value = "";
+
+			this.coachingRequestButtonText = "Sent!"
+
+			setTimeout(() => {
+				this.coachingRequestButtonText = "Send coaching request"
+			}, 5000);
 		}
 	},
 	created() {

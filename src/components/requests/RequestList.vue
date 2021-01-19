@@ -23,9 +23,6 @@ export default {
 		requestList() {
 			return this.$store.getters["requests/getRequestList"];
 		}
-	},
-	created() {
-		this.$store.dispatch("requests/populateRequestList");
 	}
 };
 </script>
