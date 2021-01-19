@@ -7,7 +7,7 @@ export default [
 		languages: ["Java", "PHP"],
 		salary: 60,
 		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
 	},
 	{
 		id: "kk0f90akuev5c5j0j3a",
@@ -15,7 +15,7 @@ export default [
 		languages: ["Python"],
 		salary: 25,
 		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
 	},
 	{
 		id: "kk0f90akgjj4qmz5j7j",
@@ -31,7 +31,7 @@ export default [
 		languages: ["C#", "PHP", "Python"],
 		salary: 35,
 		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
 	},
 	{
 		id: "kk0f90aknjoh25kufqd",
@@ -39,7 +39,7 @@ export default [
 		languages: ["JavaScript", "Java", "C#"],
 		salary: 22,
 		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
 	},
 	{
 		id: "kk0f90akktbxbpurre8",
@@ -47,7 +47,7 @@ export default [
 		languages: ["C#", "PHP"],
 		salary: 37,
 		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
 	},
 	{
 		id: "kk0f90akr2iya6lb2nn",
@@ -63,14 +63,6 @@ export default [
 		languages: ["Python", "PHP", "Java", "JavaScript"],
 		salary: 750,
 		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip e"
-	},
-	{
-		id: "kk0f90akmwqi5n4xa1f",
-		name: "Tony Stark",
-		languages: ["Rust"],
-		salary: 120,
-		description:
-			"What the fuck did you just fucking say about me, you little bitch? I'll have you know I graduated top of my class in the Navy Seals, and I've been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed kills."
+			"Hello threre, general kenobi! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
 	}
 ];
