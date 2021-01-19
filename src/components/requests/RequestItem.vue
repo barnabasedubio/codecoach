@@ -46,8 +46,11 @@ export default {
 </script>
 
 <style scoped>
+* {
+	color: white
+}
 .request-item {
-	border: 1px solid black;
+	background-color: rgba(255, 255, 255, 0.15);
 	border-radius: 5px;
 	margin-top: 2rem;
 	padding: 1rem;

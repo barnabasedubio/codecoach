@@ -57,7 +57,7 @@ export default {
 
 <style scoped>
 .coach-card {
-	border: 1px solid #555;
+	background-color: rgba(255, 255, 255, 0.15);
 	border-radius: 5px;
 	margin-top: 2rem;
 	padding: 0.5rem 1rem 1rem;
@@ -73,8 +73,12 @@ export default {
 }
 .button-view-profile {
 	float: right;
+	color: white;
+	border: 1px solid white;
+	margin-top: 1rem;
 }
 .coach-card-item {
 	margin-top: 0.5rem;
+	color: white;
 }
 </style>

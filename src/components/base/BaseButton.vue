@@ -10,14 +10,19 @@ export default {};
 
 <style scoped>
 .base-button {
-	border: 1px solid #888;
+	border: 1px solid white;
 	background-color: transparent;
 	border-radius: 5px;
 	padding: 0.5rem 1rem;
+	color: white;
+}
+
+.base-button:focus {
+	outline: none;
 }
 
 .base-button:hover {
-	background-color: #555;
+	background-color: rgba(255, 255, 255, 0.15);
 	color: white;
 }
 </style>

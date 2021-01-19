@@ -32,12 +32,14 @@ body,
 
 h2 {
 	margin-left: 1rem;
+	color: #eee;
 }
 
 #app {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	background-color: #393d7d;
 }
 
 .inline {

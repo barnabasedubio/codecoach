@@ -97,6 +97,9 @@ export default {
 </script>
 
 <style scoped>
+h3 {
+	color: #eee;
+}
 .coach-detail {
 	width: 50%;
 	height: 70vh;
@@ -108,6 +111,8 @@ export default {
 	position: relative;
 	top: 0.25rem;
 	margin-right: 0.4rem;
+	filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+		brightness(102%) contrast(102%);
 }
 .return-to-coaches {
 	width: 50%;
@@ -115,27 +120,43 @@ export default {
 }
 .return-to-coaches a {
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 .coach-detail-content {
-	border: 1px solid black;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 5px !important;
 }
 .coaching-request {
+	background-color: rgba(255, 255, 255, 0.15);
 	padding: 1rem;
 }
 .textarea-coaching-request {
-	border: 1px solid #888;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	background-color: transparent;
 	width: 100%;
 	height: 8rem;
 	margin: 1rem auto;
 	padding: 1rem;
+	color: white;
 }
+
+::placeholder {
+	color: white;
+	font-style: italic;
+}
+
+.textarea-coaching-request:focus {
+	outline: none;
+}
+
 .button-send-coaching-request {
 	display: block;
 }
 
 .no-border {
 	border: 0;
+	border-radius: 0;
 }
 
 .no-margin-top {

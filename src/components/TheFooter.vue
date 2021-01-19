@@ -1,7 +1,12 @@
 <template>
 	<footer>
 		<div class="footer-content">
-			<h4>Developed by Barnabas Edubio</h4>
+			<h4>
+				Developed by
+				<a href="https://github.com/barnabasedubio" target="_blank"
+					>Barnabas Edubio</a
+				>
+			</h4>
 		</div>
 	</footer>
 </template>
@@ -11,8 +16,16 @@ export default {};
 </script>
 
 <style>
+h4 {
+	color: #eee;
+	font-weight: 400;
+}
+a {
+	text-decoration: none;
+	color: #eee;
+}
 footer {
-	background-color: #ccc;
+	background-color: rgba(255, 255, 255, 0.15);
 	height: 5vh;
 }
 .footer-content {

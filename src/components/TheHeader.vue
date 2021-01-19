@@ -57,13 +57,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 header {
-	background-color: #ccc;
+	background-color: rgba(255, 255, 255, 0.15);
 	height: 3rem;
 }
 .header-content {
-	/* border: 1px solid red; */
 	height: 100%;
 	width: 60%;
 	margin: 0 auto;
@@ -88,6 +87,7 @@ header {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+	color: #ddd;
 }
 
 .header-button:focus {
@@ -100,7 +100,7 @@ header {
 }
 
 .router-link {
+	color: #eee;
 	text-decoration: none;
-	color: black;
 }
 </style>

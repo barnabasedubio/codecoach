@@ -13,6 +13,7 @@ export default {};
 	padding: 0.25rem 1.5rem;
 	border-radius: 30px;
 	margin-left: 1rem;
-	background-color: #eee;
+	background-color: rgba(255, 255, 255, 0.15);
+	color: white;
 }
 </style>

@@ -60,7 +60,7 @@ export default {
 .preferences-bar {
 	height: 2.5rem;
 	margin-top: 0.5rem;
-	background-color: #eee;
+	background-color: rgba(255, 255, 255, 0.15);
 	border-radius: 20px;
 }
 .clickable {
@@ -68,7 +68,7 @@ export default {
 }
 .selected {
 	color: white;
-	background-color: #555;
+	background-color: #5eadc2;
 }
 .v-align {
 	position: relative;
