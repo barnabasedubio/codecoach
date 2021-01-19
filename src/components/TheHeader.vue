@@ -23,7 +23,7 @@
 				</router-link>
 				<base-button
 					@click="toggleAuth"
-					class="button-logout header-button"
+					class="button-auth header-button"
 				>
 					{{ loginText }}
 				</base-button>
@@ -94,8 +94,9 @@ header {
 	outline: none;
 }
 
-.button-logout {
+.button-auth {
 	height: 2.2rem;
+	width: 5rem;
 }
 
 .router-link {
