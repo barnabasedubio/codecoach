@@ -1,20 +1,25 @@
 <template>
-	<h2>Select Your Preferences</h2>
-	<div class="preferences-bar">
-		<ul class="inline">
-			<li
-				class="inline"
-				v-for="langObj in languageObjectList"
-				:key="langObj.language"
-			>
-				<base-language-tag
-					class="clickable v-align"
-					:class="{ selected: langObj.isSelected }"
-					@click="toggleSelection(langObj.language)"
-					>{{ langObj.language }}</base-language-tag
+	<div v-if="isLoggedIn">
+		<h2>Select Your Preferences</h2>
+		<div class="preferences-bar">
+			<ul class="inline">
+				<li
+					class="inline"
+					v-for="langObj in languageObjectList"
+					:key="langObj.language"
 				>
-			</li>
-		</ul>
+					<base-language-tag
+						class="clickable v-align"
+						:class="{ selected: langObj.isSelected }"
+						@click="toggleSelection(langObj.language)"
+						>{{ langObj.language }}</base-language-tag
+					>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div v-else>
+		<h2>Please login to select your preferences.</h2>
 	</div>
 </template>
 
@@ -25,6 +30,9 @@ export default {
 		BaseLanguageTag
 	},
 	computed: {
+		isLoggedIn() {
+			return this.$store.getters["authentication/isLoggedIn"];
+		},
 		languageObjectList() {
 			return this.$store.getters["preferences/getLanguageObjectList"];
 		},

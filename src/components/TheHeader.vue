@@ -21,11 +21,12 @@
 						Sent
 					</base-button>
 				</router-link>
-				<router-link to="/home">
-					<base-button class="header-button">
-						Logout
-					</base-button>
-				</router-link>
+				<base-button
+					@click="toggleAuth"
+					class="button-logout header-button"
+				>
+					{{ loginText }}
+				</base-button>
 			</div>
 		</div>
 	</header>
@@ -36,6 +37,22 @@ import BaseButton from "./base/BaseButton.vue";
 export default {
 	components: {
 		BaseButton
+	},
+	computed: {
+		loginText() {
+			if (this.$store.getters["authentication/isLoggedIn"])
+				return "Logout";
+			else return "Login";
+		}
+	},
+	methods: {
+		toggleAuth() {
+			if (this.$store.getters["authentication/isLoggedIn"]) {
+				this.$store.dispatch("authentication/logout");
+			} else {
+				this.$store.dispatch("authentication/login");
+			}
+		}
 	}
 };
 </script>
@@ -54,14 +71,12 @@ header {
 	justify-content: space-between;
 }
 .header-title {
-	/* border: 1px solid red; */
 	display: inline-block;
 }
 .header-title h2 {
 	font-size: 2rem;
 }
 .header-buttons {
-	/* border: 1px solid red; */
 	min-width: 20rem;
 	float: right;
 	display: flex;
@@ -77,6 +92,10 @@ header {
 
 .header-button:focus {
 	outline: none;
+}
+
+.button-logout {
+	height: 2.2rem;
 }
 
 .router-link {

@@ -17,18 +17,24 @@
 				:profileClicked="true"
 			></coach-item>
 			<div class="coaching-request">
-				<textarea
-					class="textarea-coaching-request"
-					name=""
-					id=""
-					:placeholder="placeholderText"
-					ref="requestText"
-				></textarea>
-				<base-button
-					class="button-send-coaching-request"
-					@click="addRequest"
-					>Send coaching request</base-button
-				>
+				<div v-if="isLoggedIn">
+					<textarea
+						class="textarea-coaching-request"
+						name=""
+						id=""
+						:placeholder="placeholderText"
+						ref="requestText"
+					></textarea>
+					<base-button
+						class="button-send-coaching-request"
+						@click="addRequest"
+						>Send coaching request</base-button
+					>
+				</div>
+
+				<div v-else>
+					<h3>Please login to send {{ name }} a coaching request.</h3>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -57,6 +63,9 @@ export default {
 	computed: {
 		placeholderText() {
 			return "Send " + this.name + " a coaching request.";
+		},
+		isLoggedIn() {
+			return this.$store.getters["authentication/isLoggedIn"];
 		}
 	},
 	methods: {
