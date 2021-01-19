@@ -1,8 +1,6 @@
 # vue-coach-finder
 Frontend coach finding app built with VueJS.
 
-Try it out [here](https://barnabasedubio.github.io/codecoach/).
-
 ## Project setup
 ```
 npm install
