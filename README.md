@@ -1,5 +1,5 @@
 # vue-coach-finder
-Coach Finding Tool built with VueJS and Firebase
+Frontend coach finding app built with VueJS
 
 ## Project setup
 ```
